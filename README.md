@@ -25,7 +25,7 @@ Os resíduos serão divididos em 5 classes (plástico, papel, metal, vidro e pap
 A resolução de todas as imagens utilizadas foram padronizadas, sendo 512x384.
 
 ### Divisão em grupos de teste e treinamento
-Primeiramente serão separadas 400 imagens, de modo aleatório, para cada classe de resíduo. Após, será utilizada a Regra de Pareto em que 80% (320 imagens) das imagens separadas serão para treinamento e 20% (80 imagens) serão voltadas para os testes, com o intuito de mensurar o desempenho dos 2 algoritmos.
+Primeiramente serão separadas 400 imagens, de modo aleatório, para cada classe de resíduo. Após, será utilizada a Regra de Pareto com a finalidade de mitigar o overfitting, em que 80% (320 imagens) das imagens separadas serão para treinamento e 20% (80 imagens) serão voltadas para os testes, com o intuito de mensurar o desempenho dos 2 algoritmos.
 
 # Algoritmos utilizados 
 - Rede Neural Convolucional (CNN)
