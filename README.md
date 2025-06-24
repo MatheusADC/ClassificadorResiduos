@@ -29,6 +29,8 @@ A resolução de todas as imagens utilizadas foram padronizadas, sendo **512x384
 ### Divisão em grupos de teste e treinamento
 Primeiramente serão separadas 400 imagens, de modo aleatório, para cada classe de resíduo. Após, será utilizada a **Regra de Pareto** com a finalidade de mitigar o *overfitting*, em que 80% (320 imagens) das imagens separadas serão para treinamento e 20% (80 imagens) serão voltadas para os testes, com o intuito de mensurar o desempenho dos 2 algoritmos.
 
+Desse modo, será realizado o **balanceamento das classes**, pois todas as classes terão a mesma quantia de imagens.
+
 # <img src="https://img.icons8.com/?size=100&id=66365&format=png&color=000000" alt="Ícone dos algoritmos" width="32"> Algoritmos utilizados 
 - Rede Neural Convolucional (CNN)
 - Random Forest
@@ -38,3 +40,18 @@ O código que implementa o Random Forest teve desempenho **inferior** ao código
 ### Motivos
 - A CNN utiliza os dados brutos das imagens, já o Random Forest tem que fazer transformação usando o HOG (Histograma de Gradientes Orientados).
 - O HOG é um processo em que ocorre alta perda de informações, pois transforma as imagens em um vetor fixo de gradientes, "salvando" informações como posição das bordas, textura e cores das imagens.
+
+# <sub><img src="https://img.icons8.com/?size=100&id=COzM5bdMLExM&format=png&color=000000" width="38"></sub> Melhorias
+### Gerais
+- Utilizar mais imagens no dataset, tanto para treinamento quanto para teste.
+
+### CNN
+- Colocar a mesma resolução das imagens no parâmetro **input_shape()**, para ter uma representação mais próxima da realidade.
+```
+Conv2D(32, (3,3), activation='relu', input_shape=(384, 512, 3)),
+```
+- Aumentar o número de épocas no **param_grid**.
+
+### Random Forest
+- Ajustar hiperparâmetros com **GridSearchCV()**.
+- Usar a CNN para obter os atributos da imagens e entregar para o Random Forest apenas as saídas.
