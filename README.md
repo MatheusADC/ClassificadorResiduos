@@ -4,6 +4,9 @@ O projeto compara 2 algoritmos - **Rede Neural Convolucional (CNN)** e **Random 
 # <img src="https://img.icons8.com/?size=100&id=yo0i7M1LcJf3&format=png&color=000000" alt="Ícone de requisitos" width="28"> Requisitos
 - Python 3.11.9
 
+> [!TIP]
+> Caso esteja usando um arquivo .py, instale as bibliotecas com `pip install -r requirements.txt`
+
 # <sub><img src="https://img.icons8.com/?size=100&id=12116&format=png&color=000000" alt="Ícone de problema" width="34"></sub> Problemática
 Classificação dos **resíduos sólidos para reciclagem**.
 
