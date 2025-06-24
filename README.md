@@ -34,7 +34,7 @@ Primeiramente serão separadas 400 imagens, de modo aleatório, para cada classe
 - Random Forest
 
 # <img src="https://img.icons8.com/?size=100&id=JLCUjLjMHyBG&format=png&color=000000" alt="Ícone de conclusão" width="30"> Conclusão
-O código que implementa o Random Forest teve desempenho inferior ao código que implementa a CNN. 
+O código que implementa o Random Forest teve desempenho **inferior** ao código que implementa a CNN. 
 ### Motivos
 - A CNN utiliza os dados brutos das imagens, já o Random Forest tem que fazer transformação usando o HOG (Histograma de Gradientes Orientados).
 - O HOG é um processo em que ocorre alta perda de informações, pois transforma as imagens em um vetor fixo de gradientes, "salvando" informações como posição das bordas, textura e cores das imagens.
